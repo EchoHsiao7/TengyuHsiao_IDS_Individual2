@@ -15,6 +15,19 @@ This project demonstrates basic CRUD (Create, Read, Update, Delete) operations o
   - Fetch all students
   - Fetch students equal specified age
 
+
+## Example log for CRUD
+- Inital Table: Empty
+
+- insert_student(connection, "Echo", 24): (1, 'Echo', 24)
+
+- query1(connection): (1, 'Echo', 24)
+
+- update_age(connection, 1, 25): (1, 'Echo', 25)
+
+- delete_user(connection, 1): Empty
+
+
 ## Test
 
 In test_main.py, I perform several tests to make sure my CRUD as well as the 2 extra queries works for my database, the following is a screenshot of the successful tests 

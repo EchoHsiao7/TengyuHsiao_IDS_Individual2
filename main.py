@@ -11,9 +11,6 @@ def connect_db(db_file=".db"):
 
 
 def create_table(connection):
-    """
-    Creates the users table if it doesn't already exist.
-    """
     sql = """
     CREATE TABLE IF NOT EXISTS student (
         s_id INTEGER PRIMARY KEY AUTOINCREMENT,
