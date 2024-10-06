@@ -57,4 +57,4 @@ def test_query2(connection):
     insert_student(connection, "Hsiao", 25)
     result = query2(connection, 25)
     assert len(result) == 1
-    assert result[0][1] == "Hsiao"  # Only Bob should be returned
+    assert result[0][1] == "Hsiao"  
