@@ -1,4 +1,4 @@
-[![Python CI](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Project5/actions/workflows/cicd.yml/badge.svg)](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Project5/actions/workflows/cicd.yml)
+[![Python CI](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Individual2/actions/workflows/cicd.yml/badge.svg)](https://github.com/EchoHsiao7/TengyuHsiao_IDS_Individual2/actions/workflows/cicd.yml)
 # TengyuHsiao_IDS_Individual2
 # Complex SQL Query for a MySQL Database
 
@@ -28,7 +28,7 @@ SELECT s.id, s.first_name, s.last_name, COUNT(t.transaction_id) AS total_transac
                            ORDER BY 
                            total_deposited DESC;
 
-This query will allow you to see which students are most active in terms of deposits, allowing you to analyze both the number of transactions and the total value of deposits.
+This query retrieves each student's ID, first and last name, along with the total number of transactions they made and the total amount they have deposited. It performs a left join between students (echo_student) and their transactions (echo_transactions) to ensure all students are included, even those with no transactions. The result is grouped by each student, showing the count of all transactions and the sum of deposit amounts, and is ordered by the total deposited amount in descending order. It will allow you to see which students are most active in terms of deposits, allowing you to analyze both the number of transactions and the total value of deposits.
 
 
 ## OUTPUT of my query :
