@@ -1,0 +1,16 @@
+transaction_id,student_id,amount,transaction_type,transaction_date
+1,1,200.0,deposit,2024-08-10
+2,2,300.0,withdrawal,2024-08-12
+3,3,150.0,deposit,2024-08-14
+4,4,500.0,deposit,2024-08-18
+5,1,100.0,withdrawal,2024-08-19
+6,5,200.0,deposit,2024-08-20
+7,6,50.0,withdrawal,2024-08-22
+8,7,600.0,deposit,2024-08-25
+9,8,300.0,deposit,2024-08-28
+10,9,400.0,withdrawal,2024-09-01
+11,10,250.0,deposit,2024-09-03
+12,3,100.0,withdrawal,2024-09-04
+13,4,150.0,deposit,2024-09-05
+14,5,300.0,withdrawal,2024-09-07
+15,6,200.0,deposit,2024-09-10

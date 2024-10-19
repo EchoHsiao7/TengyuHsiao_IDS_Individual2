@@ -8,3 +8,5 @@ matplotlib==3.7.1
 polars==0.18.3
 numpy==1.24.4
 psycopg2==2.9.5
+databricks-sql-connector
+python-dotenv

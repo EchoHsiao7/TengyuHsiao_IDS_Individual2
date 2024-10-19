@@ -9,23 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_USER: your_user
-          POSTGRES_PASSWORD: your_password
-          POSTGRES_DB: your_database
-        options: >-
-          --health-cmd "pg_isready -U your_user"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
     strategy:
       matrix:
-        python-version: ['3.10']  
+        python-version: ['3.9']  
     steps:
     - uses: actions/checkout@v2
 
@@ -33,6 +19,18 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+
+    - name: Install MySQL client
+      run: sudo apt-get install -y mysql-client
+
+    - name: Connect to MySQL
+      env:
+        MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
+        MYSQL_USER: ${{ secrets.MYSQL_USER }}
+        MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+        MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+      run: |
+        mysql --host="$MYSQL_HOST" --user="$MYSQL_USER" --password="$MYSQL_PASSWORD" --database="$MYSQL_DATABASE""
 
     - name: Install dependencies
       run: |
