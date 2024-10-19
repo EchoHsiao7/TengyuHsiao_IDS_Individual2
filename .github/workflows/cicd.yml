@@ -20,18 +20,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install MySQL client
-      run: sudo apt-get install -y mysql-client
-
-    - name: Connect to MySQL
-      env:
-        MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
-        MYSQL_USER: ${{ secrets.MYSQL_USER }}
-        MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
-        MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
-      run: |
-        mysql --host="$MYSQL_HOST" --user="$MYSQL_USER" --password="$MYSQL_PASSWORD" --database="$MYSQL_DATABASE""
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
